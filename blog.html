@@ -44,6 +44,9 @@
       .filter-chip.active { background: var(--brand); color: #fff; border-color: var(--brand); }
       footer a { color: #93a39d; text-decoration: none; }
       footer a:hover { color: var(--accent); }
+      
+      /* PERBAIKAN AKSESIBILITAS KONTRAS WARNA */
+      .text-secondary { color: #555d66 !important; }
     </style>
   </head>
 
@@ -60,7 +63,7 @@
           </span>
           Nexora AI
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMain">
@@ -191,7 +194,7 @@
         <div class="row g-4 mb-4">
           <div class="col-md-5">
             <h2 class="h5 brand-font">Nexora AI</h2>
-            <p class="text-secondary">Chatbot dan otomasi proses bisnis untuk UMKM Indonesia.</p>
+            <p class="text-white-50">Chatbot dan otomasi proses bisnis untuk UMKM Indonesia.</p>
           </div>
           <div class="col-md-4 offset-md-3 text-md-end">
             <a href="index.html" class="d-block mb-2">Beranda</a>
@@ -199,7 +202,7 @@
             <a href="cv.html" class="d-block">Curriculum Vitae</a>
           </div>
         </div>
-        <div class="border-top border-secondary pt-3 text-center text-secondary small">
+        <div class="border-top border-secondary pt-3 text-center text-white-50 small">
           © 2026 Nexora AI. Studi kasus PABWE Praktikum 2.
         </div>
       </div>

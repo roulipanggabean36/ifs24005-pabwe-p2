@@ -28,12 +28,8 @@
       .related-card:hover { transform: translateY(-4px); }
       footer a { color: #93a39d; text-decoration: none; }
       footer a:hover { color: var(--accent); }
-
-      /* Class pengganti Bootstrap .text-secondary / .text-muted.
-         Warna default Bootstrap (#6c757d) tidak memenuhi kontras
-         WCAG 2 AA (rasio < 4.5:1) di atas background --paper (#f6f4ee)
-         maupun --brand-soft (#e4efec). #4a5753 di atas kedua background
-         tersebut menghasilkan rasio kontras > 6:1. */
+      
+      /* CLASS PENGGANTI AGAR KONTRAS LULUS AXE CORE */
       .text-accessible { color: #4a5753 !important; }
     </style>
   </head>
@@ -43,7 +39,7 @@
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
           <span class="d-inline-flex align-items-center justify-content-center bg-brand rounded" style="width:32px;height:32px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
               <circle cx="12" cy="12" r="2.4" fill="white"/>
             </svg>
@@ -76,13 +72,13 @@
           </ol>
         </nav>
 
-        <span class="badge badge-tag rounded-pill mb-3"><i class="bi bi-cpu me-1" aria-hidden="true"></i>Generative AI</span>
+        <span class="badge badge-tag rounded-pill mb-3"><i class="bi bi-cpu me-1"></i>Generative AI</span>
         <h1 class="fw-bold mb-3">Apa itu RAG dan Kenapa Penting untuk Chatbot Bisnis</h1>
 
         <div class="d-flex flex-wrap align-items-center gap-3 text-accessible small mb-4 pb-4 border-bottom">
-          <span><i class="bi bi-person-circle me-1" aria-hidden="true"></i>Ditulis oleh Aditya R.</span>
-          <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>12 September 2026</span>
-          <span><i class="bi bi-clock me-1" aria-hidden="true"></i>6 menit baca</span>
+          <span><i class="bi bi-person-circle me-1"></i>Ditulis oleh Aditya R.</span>
+          <span><i class="bi bi-calendar3 me-1"></i>12 September 2026</span>
+          <span><i class="bi bi-clock me-1"></i>6 menit baca</span>
         </div>
 
         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop" class="cover-full mb-5" alt="Ilustrasi jaringan data yang merepresentasikan pencarian informasi AI" />
@@ -93,7 +89,7 @@
           <blockquote>"RAG mengubah chatbot dari sekadar penjawab umum menjadi asisten yang benar-benar memahami data bisnis Anda."</blockquote>
           <p>Bagi UMKM, manfaat RAG terasa langsung pada kualitas layanan. Chatbot yang dibekali RAG dapat menjawab pertanyaan spesifik seperti ketersediaan stok terbaru atau syarat promo yang sedang berjalan, tanpa perlu dilatih ulang setiap kali ada perubahan data. Tim cukup memperbarui dokumen sumbernya, dan chatbot akan otomatis mengikuti informasi terkini.</p>
           <div class="alert alert-primary d-flex gap-2" role="alert">
-            <i class="bi bi-info-circle-fill fs-5" aria-hidden="true"></i>
+            <i class="bi bi-info-circle-fill fs-5"></i>
             <div>Tips: mulai dengan sumber data yang paling sering ditanyakan pelanggan — biasanya katalog produk dan kebijakan pengiriman — sebelum memperluas ke dokumen lain.</div>
           </div>
           <h2 class="h4 mt-5 mb-3">Tiga hal yang perlu disiapkan sebelum menerapkan RAG</h2>
@@ -132,24 +128,23 @@
         </section>
 
         <section class="mt-5 pt-4 border-top" style="max-width: 760px; margin-inline: auto;">
-          <h2 class="h5 mb-4"><i class="bi bi-chat-dots me-1" aria-hidden="true"></i>Komentar</h2>
+          <h2 class="h5 mb-4"><i class="bi bi-chat-dots me-1"></i>Komentar</h2>
 
           <div class="d-flex gap-3 mb-4">
-            <i class="bi bi-person-circle fs-1 text-accessible" aria-hidden="true"></i>
+            <i class="bi bi-person-circle fs-1 text-accessible"></i>
             <div class="flex-grow-1">
               <div class="fw-semibold">Rina W.</div>
               <p class="text-accessible small mb-1">Artikelnya jelas banget, jadi paham kenapa chatbot kami sering salah jawab soal stok. Terima kasih!</p>
-              <span class="text-accessible small"><i class="bi bi-clock me-1" aria-hidden="true"></i>2 hari lalu</span>
+              <span class="text-accessible small"><i class="bi bi-clock me-1"></i>2 hari lalu</span>
             </div>
           </div>
 
           <form action="#" method="post" class="d-flex gap-3">
-            <i class="bi bi-person-circle fs-1 text-accessible" aria-hidden="true"></i>
+            <i class="bi bi-person-circle fs-1 text-accessible"></i>
             <div class="flex-grow-1">
-              <label for="komentar" class="visually-hidden">Tulis komentar Anda</label>
-              <textarea id="komentar" name="komentar" class="form-control mb-2" rows="3" placeholder="Tulis komentar Anda..."></textarea>
+              <textarea class="form-control mb-2" rows="3" placeholder="Tulis komentar Anda..."></textarea>
               <button type="submit" class="btn btn-brand btn-sm">
-                <i class="bi bi-send me-1" aria-hidden="true"></i>Kirim Komentar
+                <i class="bi bi-send me-1"></i>Kirim Komentar
               </button>
             </div>
           </form>

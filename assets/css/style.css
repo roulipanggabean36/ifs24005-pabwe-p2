@@ -7,7 +7,10 @@
   /* Warna brand: teal tua + amber hangat */
   --ink: #14231e;
   --ink-soft: #3f544d;
-  --muted: #6b7d77;
+  /* Diubah dari #6b7d77 → #4a5753 agar rasio kontras memenuhi
+     WCAG 2 AA (>= 4.5:1) di atas background putih (--surface)
+     maupun krem (--paper). Nilai lama hanya menghasilkan 3.95–4.35. */
+  --muted: #4a5753;
 
   --paper: #f6f4ee;
   --surface: #ffffff;
@@ -722,7 +725,7 @@ textarea::placeholder {
   padding-block: 20px;
   text-align: center;
   font-size: 0.85rem;
-  color: #7c8d87;
+  color: #93a39d;
 }
 
 /* =========================================================

@@ -28,8 +28,12 @@
       .filter-chip.active { background: var(--brand); color: #fff; border-color: var(--brand); }
       footer a { color: #93a39d; text-decoration: none; }
       footer a:hover { color: var(--accent); }
-      
-      /* CLASS PENGGANTI AGAR KONTRAS LULUS AXE CORE */
+
+      /* Class pengganti Bootstrap .text-secondary / .text-muted.
+         Warna default Bootstrap (#6c757d) tidak memenuhi kontras
+         WCAG 2 AA (rasio < 4.5:1) di atas background --paper (#f6f4ee)
+         maupun --brand-soft (#e4efec). #4a5753 di atas kedua background
+         tersebut menghasilkan rasio kontras > 6:1. */
       .text-accessible { color: #4a5753 !important; }
     </style>
   </head>
@@ -39,7 +43,7 @@
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
           <span class="d-inline-flex align-items-center justify-content-center bg-brand rounded" style="width:32px;height:32px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/>
               <circle cx="12" cy="12" r="2.4" fill="white"/>
             </svg>
@@ -66,7 +70,7 @@
     <main>
       <section class="bg-brand-soft py-5">
         <div class="container">
-          <span class="badge badge-tag rounded-pill mb-3"><i class="bi bi-journal-text me-1"></i>Blog Nexora</span>
+          <span class="badge badge-tag rounded-pill mb-3"><i class="bi bi-journal-text me-1" aria-hidden="true"></i>Blog Nexora</span>
           <h1 class="fw-bold mb-2">Wawasan seputar AI untuk bisnis</h1>
           <p class="text-accessible mb-0 col-lg-8">
             Artikel ringkas tentang penerapan kecerdasan buatan, otomasi, dan
@@ -96,9 +100,9 @@
                   <h2 class="h5"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Apa itu RAG dan Kenapa Penting untuk Chatbot Bisnis</a></h2>
                   <p class="text-accessible small flex-grow-1">Mengapa Retrieval-Augmented Generation membuat jawaban chatbot lebih akurat dan relevan dengan data bisnis Anda.</p>
                   <div class="d-flex align-items-center gap-3 text-accessible small mt-2 pt-2 border-top">
-                    <span><i class="bi bi-person me-1"></i>Aditya R.</span>
-                    <span><i class="bi bi-calendar3 me-1"></i>12 Sep 2026</span>
-                    <span><i class="bi bi-clock me-1"></i>6 mnt</span>
+                    <span><i class="bi bi-person me-1" aria-hidden="true"></i>Aditya R.</span>
+                    <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>12 Sep 2026</span>
+                    <span><i class="bi bi-clock me-1" aria-hidden="true"></i>6 mnt</span>
                   </div>
                 </div>
               </article>
@@ -111,9 +115,9 @@
                   <h2 class="h5"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">5 Cara Prompt Engineering Meningkatkan Kualitas Jawaban AI</a></h2>
                   <p class="text-accessible small flex-grow-1">Teknik sederhana menyusun instruksi agar model AI memberi jawaban yang lebih tepat sasaran.</p>
                   <div class="d-flex align-items-center gap-3 text-accessible small mt-2 pt-2 border-top">
-                    <span><i class="bi bi-person me-1"></i>Nadia P.</span>
-                    <span><i class="bi bi-calendar3 me-1"></i>05 Sep 2026</span>
-                    <span><i class="bi bi-clock me-1"></i>4 mnt</span>
+                    <span><i class="bi bi-person me-1" aria-hidden="true"></i>Nadia P.</span>
+                    <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>05 Sep 2026</span>
+                    <span><i class="bi bi-clock me-1" aria-hidden="true"></i>4 mnt</span>
                   </div>
                 </div>
               </article>
@@ -126,9 +130,9 @@
                   <h2 class="h5"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Etika AI: Tantangan Bias dalam Model Machine Learning</a></h2>
                   <p class="text-accessible small flex-grow-1">Mengenali sumber bias data dan langkah praktis menguranginya pada produk AI yang digunakan pelanggan.</p>
                   <div class="d-flex align-items-center gap-3 text-accessible small mt-2 pt-2 border-top">
-                    <span><i class="bi bi-person me-1"></i>Farhan S.</span>
-                    <span><i class="bi bi-calendar3 me-1"></i>28 Agu 2026</span>
-                    <span><i class="bi bi-clock me-1"></i>7 mnt</span>
+                    <span><i class="bi bi-person me-1" aria-hidden="true"></i>Farhan S.</span>
+                    <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>28 Agu 2026</span>
+                    <span><i class="bi bi-clock me-1" aria-hidden="true"></i>7 mnt</span>
                   </div>
                 </div>
               </article>
@@ -141,9 +145,9 @@
                   <h2 class="h5"><a href="blog-detail.html" class="text-dark text-decoration-none stretched-link">Computer Vision di Industri Manufaktur: Deteksi Cacat Otomatis</a></h2>
                   <p class="text-accessible small flex-grow-1">Bagaimana kamera dan model visual membantu pabrik kecil menekan produk gagal sejak dini.</p>
                   <div class="d-flex align-items-center gap-3 text-accessible small mt-2 pt-2 border-top">
-                    <span><i class="bi bi-person me-1"></i>Dewi K.</span>
-                    <span><i class="bi bi-calendar3 me-1"></i>20 Agu 2026</span>
-                    <span><i class="bi bi-clock me-1"></i>5 mnt</span>
+                    <span><i class="bi bi-person me-1" aria-hidden="true"></i>Dewi K.</span>
+                    <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i>20 Agu 2026</span>
+                    <span><i class="bi bi-clock me-1" aria-hidden="true"></i>5 mnt</span>
                   </div>
                 </div>
               </article>
@@ -152,8 +156,8 @@
 
           <nav class="mt-5" aria-label="Navigasi halaman blog">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled"><a class="page-link" href="#">Sebelumnya</a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Sebelumnya</a></li>
+              <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
               <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
             </ul>
